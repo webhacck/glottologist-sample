@@ -1,0 +1,38 @@
+{
+	"title": {
+      "ja": "サンプルタイトル",
+      "en": "Sample Title",
+      "zh": "样本标题"
+	},
+  "text": {
+      "ja": "私はこのテキストをさまざまな言語に翻訳します",
+      "en": "I translate this text into various languages.",
+      "zh": "我将这段文字翻译成各种语言"
+ 
+  },
+  "btn": {
+      "ja": "もっと詳しく",
+      "en": "Learn more",
+      "zh": "学到更多"
+  },
+  "jp": {
+      "ja": "日本語",
+      "en": "Japanese",
+      "zh": "日本"
+  },
+  "us": {
+      "ja": "英語",
+      "en": "English",
+      "zh": "英语"
+  },
+  "ch": {
+      "ja": "中国語",
+      "en": "Chinese",
+      "zh": "中国"
+  },
+  "footer": {
+      "ja": "2018 サンプルサイト",
+      "en": "2018 Sample Site",
+      "zh": "2018 桑普网站"
+  }
+}
