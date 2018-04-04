@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>サンプルサイト</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/mystyle.css" rel="stylesheet">
+  </head>
+
+  <body class="text-center">
+
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link" href="#" id="ja">日本語</a>
+            <a class="nav-link" href="#" id="en">英語</a>
+            <a class="nav-link" href="#" id="zh">中国語</a>
+          </nav>
+        </div>
+      </header>
+
+      
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading" glot-model="title">Sample Title</h1>
+        <p class="lead" glot-model="text">I translate this text into various languages.</p>
+        <p class="lead">
+          <a class="btn btn-lg btn-secondary" href="#" glot-model="btn">Learn more</a>
+        </p>
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>2018 サンプルサイト</p>
+        </div>
+      </footer>
+    </div>
+
+
+    <script src="https://unpkg.com/glottologist"></script>
+    <script>
+      const glot = new Glottologist();
+
+      glot.assign('title', {
+        ja: 'サンプルタイトル',
+        en: 'Sample Title',
+        zh: '样本标题'
+      })
+
+      glot.assign('text', {
+        ja: '私はこのテキストをさまざまな言語に翻訳します',
+        en: 'I translate this text into various languages.',
+        zh: '我将这段文字翻译成各种语言'
+      })
+
+      glot.assign('btn', {
+        ja: 'もっと詳しく',
+        en: 'Learn more',
+        zh: '学到更多'
+      })
+
+      glot.render();
+      
+      
+      
+      
+      /**
+      **言語切り替え用のイベント処理
+      **/
+      const ja = document.getElementById('ja');
+      const en = document.getElementById('en');
+      const zh = document.getElementById('zh');
+
+      ja.addEventListener('click', e => {
+        e.preventDefault();
+        glot.render('ja');
+      })
+      
+      en.addEventListener('click', e => {
+        e.preventDefault()
+        glot.render('en');
+      })
+ 
+      zh.addEventListener('click', e => {
+        e.preventDefault()
+        glot.render('zh');
+      })
+    </script>
+  </body>
+</html>
